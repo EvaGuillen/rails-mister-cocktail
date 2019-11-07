@@ -1,0 +1,12 @@
+<h1>All our Cocktails</h1>
+
+
+<% @cocktails.each do |cocktail| %>
+<div class="grid">
+  <div class="card">
+    <p><%= link_to cocktail.name, cocktail_path(cocktail) %></p>
+  </div>
+</div>
+<% end %>
+
+<%= link_to 'Add a cocktail', new_cocktail_path, class: "btn btn-primary" %>
