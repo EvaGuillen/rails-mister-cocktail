@@ -1,12 +1,18 @@
-<h1>All our Cocktails</h1>
+<div class="banner">
+  <h1>All our Cocktails</h1>
+  <p>Lorem ipsum</p>
+</div>
 
-
-<% @cocktails.each do |cocktail| %>
-<div class="grid">
-  <div class="card">
-    <p><%= link_to cocktail.name, cocktail_path(cocktail) %></p>
+<div class="container">
+  <div class="button">
+    <%= link_to '+ Add a cocktail', new_cocktail_path %>
+  </div>
+  <div class="grid">
+    <% @cocktails.each do |cocktail| %>
+      <div class="card">
+        <%= cl_image_tag cocktail.photo, height: 300, width: 400, crop: :lfill %>
+        <p><%= link_to cocktail.name, cocktail_path(cocktail) %></p>
+      </div>
+    <% end %>
   </div>
 </div>
-<% end %>
-
-<%= link_to 'Add a cocktail', new_cocktail_path, class: "btn btn-primary" %>

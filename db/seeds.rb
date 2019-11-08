@@ -14,5 +14,7 @@ Ingredient.create(name: "mint leaves")
 Ingredient.create(name: "vodka")
 Ingredient.create(name: "rhum")
 Ingredient.create(name: "tequila")
+Ingredient.create(name: "gin")
+Ingredient.create(name: "schnaps")
 
 puts 'Finished!'
